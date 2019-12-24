@@ -12,7 +12,7 @@ defmodule App.Data.Inventory do
 
   def changeset(struct, attrs) do
     struct
-    |> cast(attrs, [:part_number, :branch_id, :part_price, :short_desc, :is_deleted])
+    |> cast(attrs, [:part_number, :branch_id, :part_price, :short_desc])
     |> validate_required([:part_number, :branch_id, :part_price, :short_desc])
     |> unique_constraint(:part_number)
   end
