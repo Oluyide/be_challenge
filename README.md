@@ -20,7 +20,7 @@ If Assumptions can be forgiven , I assumed PART_NUMBER  are unique.
 4. Refactor the create function in the page controller like splitting it up to smaller modules
 5. creating an acceptance testing using white bread and Hund
 6. I may want to know the intervals at which this kind of data arrive and also, if file is been uploaded on a FTP server, and the system can now be automated in a way of checking the FTP server at off peak hours, process and trasform the data.
-7. Logging and Application monitoring (using Elixometer)
+7. Logging and Application monitoring (using Elixometer).
 8 Datavisualization: creating charts for better visulization.
 
 
