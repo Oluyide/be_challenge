@@ -3,9 +3,10 @@
 1. cd app
 2. Install dependencies with mix deps.get
 3. Create and migrate your database with mix ecto.setup
-4.Start Phoenix endpoint with mix phx.server
+4. Install Node.js dependencies with cd assets && npm install
+5. Start Phoenix endpoint with mix phx.server
+Now you can visit localhost:4000 from your browser
 
-Now you can visit localhost:4000 from your browser.
 
 **Asumption**
 I am not sure if it is wrong to assume on this Task,
