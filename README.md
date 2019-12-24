@@ -1,3 +1,30 @@
+**Project Setup**
+1. cd into app
+2. run mix deps.get
+3. 
+
+
+
+**Asumption**
+I am not sure if it is wrong to assume on this Task,
+If Assumptions can be forgiven , I assumed PART_NUMBER  are unique.
+
+**If given More Time, I would like to**
+
+1. Make it a single page app, with a separate BE and separate Front end and also work more on the front end for more appealling view.
+2. To check several failure points,(e.g missing column, separator is not a pipe | in a datarow, which will lead to writing more test, as test are limited at the moment and the only failure point tested now is invalid file type.
+3. Deploy to Heroku and build a CI/CD pipeline
+4. Refactor the create function in the page controller like splitting it up to smaller modules
+5. Create an end to end BDD testing using Hound
+6. I may want to know the intervals at which this kind of data arrive and also, if file is been uploaded on a FTP server, and the system can now be automated in a way of checking the FTP server at off peak hours
+7. Also like to explore a better data flow e.g using aGenStage behavior which allow creation of event flows between elixir processes
+
+
+
+
+
+
+
 Interview task :)
 ===============================
 
