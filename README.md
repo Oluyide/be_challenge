@@ -1,6 +1,6 @@
 **Project Setup**
 
-1. cd into app
+1. cd app
 2. Install dependencies with mix deps.get
 3. Create and migrate your database with mix ecto.setup
 4.Start Phoenix endpoint with mix phx.server
