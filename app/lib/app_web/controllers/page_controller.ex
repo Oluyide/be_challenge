@@ -10,7 +10,7 @@ defmodule AppWeb.PageController do
   end
 
   def create(conn, params) do
-    if params["inventory"]["data"].content_type == "text/csv" do
+    if params["inventory"]["data"].content_type == "text/csv" || params["inventory"]["data"].content_type == "application/vnd.ms-excel" do
       results =
         params["inventory"]["data"].path
         |> File.stream!()
@@ -63,7 +63,7 @@ defmodule AppWeb.PageController do
       changeset = Inventory.changeset(%Inventory{}, %{})
 
       conn
-      |> put_flash(:info, "save successfully")
+      |> put_flash(:info, "Saved successfully")
       |> render("index.html", inventories: inventories, changeset: changeset)
     else
       inventories = DataAccess.get_all()
