@@ -18,7 +18,7 @@ defmodule AppWeb.PageControllerTest do
     conn = build_conn() |> post("/", upload)
 
     response = html_response(conn, 200)
-    matches = Regex.named_captures(~r/save successfully/, response)
+    matches = Regex.named_captures(~r/Saved successfully/, response)
 
     inventories = DataAccess.get_all()
     assert length(inventories) == 8
@@ -45,7 +45,7 @@ defmodule AppWeb.PageControllerTest do
     conn = build_conn() |> post("/", upload)
 
     response = html_response(conn, 200)
-    matches = Regex.named_captures(~r/save successfully/, response)
+    matches = Regex.named_captures(~r/Saved successfully/, response)
 
     inventories = DataAccess.get_all()
     assert length(inventories) == 4
@@ -69,7 +69,7 @@ defmodule AppWeb.PageControllerTest do
     conn = build_conn() |> post("/", upload)
 
     response = html_response(conn, 200)
-    matches = Regex.named_captures(~r/save successfully/, response)
+    matches = Regex.named_captures(~r/Saved successfully/, response)
 
     inventories = DataAccess.get_all()
     assert length(inventories) == 14
