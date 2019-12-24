@@ -1,3 +1,34 @@
+**Project Setup**
+
+1. cd app
+2. Install dependencies with mix deps.get
+3. Create and migrate your database with mix ecto.setup
+4. Install Node.js dependencies with cd assets && npm install
+5. Start Phoenix endpoint with mix phx.server
+Now you can visit localhost:4000 from your browser
+
+
+**Asumption**
+I am not sure if it is wrong to assume on this Task,
+If Assumptions can be forgiven , I assumed PART_NUMBER  are unique.
+
+**If given More Time, I would like to**
+
+1. Make it a single page app, with a separate BE and separate Front end and also work more on the front end for more appealling view.
+2. To check several failure points,(e.g missing column, separator is not a pipe | in a datarow, ), which will lead to writing more test, as test are limited at the moment and the only failure point tested now is invalid file type.
+3. Deploy to Heroku and build a CI/CD pipeline
+4. Refactor the create function in the page controller like splitting it up to smaller modules
+5. creating an acceptance testing using white bread and Hund
+6. I may want to know the intervals at which this kind of data arrive and also, if file is been uploaded on a FTP server, and the system can now be automated in a way of checking the FTP server at off peak hours, process and trasform the data.
+7. Logging and Application monitoring (using Elixometer)
+8 Datavisualization: creating charts for better visulization.
+
+
+
+
+
+
+
 Interview task :)
 ===============================
 
