@@ -1,0 +1,28 @@
+<%= form_for @changeset, Routes.page_path(@conn, :create), [multipart: true], fn f -> %>
+  <%= file_input f, :data, class: "form-control" %>
+  <%= submit "Upload", class: "btn btn-primary" %>
+<% end %>
+
+
+<table style="width:100%">
+<tr>
+<th>Part Number</th>
+<th>Branch ID</th>
+<th>Part Price</th>
+<th>Short Description</th>
+</tr>
+
+
+<%= for inventory <- @inventories do %>
+
+<tr>
+<td><%= inventory.part_number %></td>
+<td><%= inventory.branch_id %></td>
+<td><%= inventory.part_price %></td>
+<td><%= inventory.short_desc %></td>
+
+</tr>
+
+<% end %>
+
+</table>
