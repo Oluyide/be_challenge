@@ -7,7 +7,6 @@ defmodule App.Repo.Migrations.AddInventories do
       add(:branch_id, :string)
       add(:part_price, :float)
       add(:short_desc, :string)
-      add(:is_deleted, :boolean)
       timestamps()
     end
     create unique_index(:inventories, [:part_number])

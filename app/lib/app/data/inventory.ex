@@ -7,7 +7,6 @@ defmodule App.Data.Inventory do
     field(:branch_id, :string)
     field(:part_price, :float)
     field(:short_desc, :string)
-    field(:is_deleted, :boolean, default: false)
     timestamps()
   end
 
