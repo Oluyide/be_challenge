@@ -9,23 +9,22 @@ Now you can visit localhost:4000 from your browser
 
 
 **Asumption**
-I am not sure if it is wrong to assume on this Task,
-If Assumptions can be forgiven , I assumed PART_NUMBER  are unique.
+ I assumed that PART_NUMBER  are unique, since it is an identifier for products
 
 **If given More Time, I would like to**
 
 1. Make it a single page app, with a separate BE and separate Front end and also work more on the front end for more appealling view.
-2. To check several failure points,(e.g missing column, separator is not a pipe | in a datarow, ), which will lead to writing more test, as test are limited at the moment and the only failure point tested now is invalid file type.
-3. Deploy and build a CI/CD pipeline
-4. Refactor the create function in the page controller like splitting it up to smaller modules
-5. creating an acceptance testing using white bread and Hund
-6. I may want to know the intervals at which this kind of data arrive and also, if file is been uploaded on a FTP server, and the system can now be automated in a way of checking the FTP server at off peak hours, process and trasform the data.
-7. Logging and Application monitoring (using Elixometer).
-8 Datavisualization: creating charts for better visulization.
-
-
-
-
+2. To check several failure points,(e.g missing column, separator is not a pipe | in a datarow, even when an empty form is submmitted ), which will lead to writing more test, as test are limited at the moment and the only failure point tested now is invalid file type.
+3. Also the deleted data based on missing items in the csv files can be handle more gracefully as a new column can be added to the table inventory "is_deleted" boolean which will be defaulted to false and updated to true anytime the item no longer exit in the csv file and the inventories will be queried where is_deleted is false, and subsequent update will be done and update to true at free will.However if there is need for audit trail, i.e keeping historical records of activities especially deleted items, this can also be handled.
+4. The user should be alerted for the numbers of record deleted and may be the names of items deleted.
+5. Also I would have love to have a "product" table, as well as "branch" table in the database instead of just inventory,
+which will either be a one to many relationship or many to many relationship, depending on the working processes of kloeckner 
+6. Deploy and build a CI/CD pipeline
+7. Refactor the create function in the page controller like splitting it up to smaller functions
+8. creating an acceptance testing using white bread and Hound
+9. I may want to know the intervals at which this kind of data arrive and also, if file is been uploaded on a FTP server, and the system can now be automated in a way of checking the FTP server at off peak hours, process and trasform the data.
+10. Logging and Application monitoring (using Elixometer).
+11. Datavisualization: creating charts for better visulization.
 
 
 
