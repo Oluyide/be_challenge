@@ -10,7 +10,8 @@ defmodule AppWeb.PageController do
   end
 
   def create(conn, params) do
-    if params["inventory"]["data"].content_type == "text/csv" || params["inventory"]["data"].content_type == "application/vnd.ms-excel" do
+    if Map.has_key?(params, params["inventory"]) and (params["inventory"]["data"].content_type == "text/csv"
+    or params["inventory"]["data"].content_type == "application/vnd.ms-excel") do
       results =
         params["inventory"]["data"].path
         |> File.stream!()
