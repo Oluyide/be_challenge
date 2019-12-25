@@ -93,5 +93,6 @@ defmodule AppWeb.PageControllerTest do
 
     response = html_response(conn, 200)
     matches = Regex.named_captures(~r/This is a wrong file/, response)
+    assert response =~ ~r/This is a wrong file/
   end
 end

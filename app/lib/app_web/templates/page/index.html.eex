@@ -1,5 +1,5 @@
 <%= form_for @changeset, Routes.page_path(@conn, :create), [multipart: true], fn f -> %>
-  <%= file_input f, :data, class: "form-control" %>
+  <%= file_input f, :data, class: "form-control", required: true %>
   <%= submit "Upload", class: "btn btn-primary" %>
 <% end %>
 

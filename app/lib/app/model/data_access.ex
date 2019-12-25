@@ -20,8 +20,6 @@ defmodule App.Model.DataAccess do
     Repo.all(item)
   end
 
-
-
   def get_all() do
     Repo.all(Inventory)
   end
